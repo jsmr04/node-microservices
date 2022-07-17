@@ -19,3 +19,12 @@ build:
         manual:
           - src: 'src/**/*.ts' 
             dest: .
+    # - image: jsmr04/client
+    - image: us.gcr.io/ticketing-dev-355503/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.js' 
+            dest: .
